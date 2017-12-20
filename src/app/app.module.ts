@@ -12,6 +12,8 @@ import { StockManageComponent } from './stock/stock-manage/stock-manage.componen
 import { StarsComponent } from './stars/stars.component';
 import {Routes, RouterModule} from "@angular/router";
 import { DashboardComponent } from './dashboard/dashboard.component';
+import {FormsModule} from "@angular/forms";
+import {HttpModule} from "@angular/http";
 
 const routeConfig:Routes = [
   {path: '',redirectTo:'/dashboard',pathMatch:'full'},
@@ -33,6 +35,8 @@ const routeConfig:Routes = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpModule,
     RouterModule.forRoot(routeConfig)
   ],
   providers: [],
