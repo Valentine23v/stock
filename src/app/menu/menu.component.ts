@@ -9,16 +9,20 @@ import {Router} from "@angular/router";
 export class MenuComponent implements OnInit {
 
   menus:Array<Menu>;
+  currentmenuId:number;
+
   constructor(public router:Router) { }
 
   ngOnInit() {
     this.menus=[
       new Menu(1,'首页','dashboard'),
       new Menu(2,'管理','stock')
-    ]
+    ];
+
   }
   nav (menu:Menu){
     this.router.navigateByUrl(menu.link);
+    this.currentmenuId=menu.id;//将页面的id赋值到currentmenuId
   }
 
 }

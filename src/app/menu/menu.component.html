@@ -31,7 +31,7 @@
     <ul class="sidebar-menu" data-widget="tree">
       <li class="header">HEADER</li>
       <!-- Optionally, you can add icons to the links -->
-      <li *ngFor="let menu of menus" class="active"><a href="javascript:;" (click)="nav(menu)"><i class="fa fa-link"></i> <span>{{menu.name}}</span></a></li>
+      <li *ngFor="let menu of menus" [class.active]="currentmenuId==menu.id"><a href="javascript:;" (click)="nav(menu)"><i class="fa fa-link"></i> <span>{{menu.name}}</span></a></li>
       <!--<li><a href="javascript:;" (click)="nav('stock')" ><i class="fa fa-link"></i> <span>管理</span></a></li>-->
       <!--<li class="treeview">
         <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
